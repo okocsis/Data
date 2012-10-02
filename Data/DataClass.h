@@ -3,9 +3,9 @@
 
 #include <iostream>
 
-using namespace std;
-
 template <typename DataTemplate>
+
+//typedef int DataTemplate;
 class DataClass
 {
 public:
@@ -23,11 +23,8 @@ public:
     
     Node* head;
     
-    DataClass();
-    virtual ~DataClass();
-    
     virtual bool isEmpty();
-    virtual void print(string &outDataTemplate);
+    virtual void print(std::string &outDataTemplate);
     virtual DataTemplate top();
     virtual DataTemplate pop();
     virtual void push(DataTemplate value);
@@ -44,10 +41,9 @@ public:
     virtual void RemoveFirst();
     virtual void RemoveLast();
     
-
+    
     
 };
-
 
 
 #endif

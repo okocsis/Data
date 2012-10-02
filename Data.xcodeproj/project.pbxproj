@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C3F3FEBA161A528400795628 /* Data.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3F3FEB9161A528400795628 /* Data.1 */; };
-		C3F3FEDE161B17CD00795628 /* DataClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F3FEC3161A52BE00795628 /* DataClass.cpp */; };
 		C3F3FEDF161B204D00795628 /* DataClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F3FEC3161A52BE00795628 /* DataClass.cpp */; };
 /* End PBXBuildFile section */
 
@@ -165,7 +164,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3F3FEDE161B17CD00795628 /* DataClass.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +279,7 @@
 				C3F3FED7161AD1AF00795628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

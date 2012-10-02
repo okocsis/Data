@@ -2,24 +2,32 @@
 
 #include <iostream>
 #include "DataClass.h"
-using namespace std;
-    
-    DataClass::DataClass() : head(NULL){}
 
-    DataClass::~DataClass()
-    {
-        while(head!=0)
-        {
-            Node *n=head;
-            head=head->prevNode;
-            delete n;
-        }
-    }
-    bool DataClass::isEmpty()
+
+using namespace std;
+
+
+
+
+//    DataClass::DataClass()
+//    {}
+//
+//    DataClass::~DataClass()
+//    {
+//        while(head!=0)
+//        {
+//            Node *n=head;
+//            head=head->prevNode;
+//            delete n;
+//        }
+//    }
+    template <typename DataTemplate>
+    bool DataClass<DataTemplate>::isEmpty()
     {
         return !(bool)head;
     }
-    void DataClass::print(string &outDataTemplate)
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::print(string &outDataTemplate)
     {
         //                Node* tempPtr;
         //                tempPtr = this->head;
@@ -31,7 +39,8 @@ using namespace std;
         //                    tempPtr = tempPtr->prevNode;
         //                }
     }
-    DataTemplate DataClass::top()
+    template <typename DataTemplate>
+    DataTemplate DataClass<DataTemplate>::top()
     {
         if (!isEmpty())
         {
@@ -43,7 +52,8 @@ using namespace std;
         }
         return 0;
     }
-    DataTemplate DataClass::pop()
+    template <typename DataTemplate>
+    DataTemplate DataClass<DataTemplate>::pop()
     {
         if (isEmpty()) {
             throw (string)"nemjo";
@@ -55,7 +65,8 @@ using namespace std;
         
         return tempData;
     }
-    void DataClass::push(DataTemplate value)
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::push(DataTemplate value)
     {
         Node* tempNode = new Node;
         tempNode->data = value;
@@ -63,6 +74,24 @@ using namespace std;
         head = tempNode;
     }
 
-    
-};
 
+
+
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::PrintOut(){}
+    template <typename DataTemplate>
+    DataTemplate DataClass<DataTemplate>::GetValue(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::StepNext(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::RemoveAct(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::InsertLast(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::InsertAfter(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::RemoveFirst(){}
+    template <typename DataTemplate>
+    void DataClass<DataTemplate>::RemoveLast(){}
+
+int main(){return 0;}
