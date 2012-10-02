@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3F3FEB8161A528400795628 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F3FEB7161A528400795628 /* main.cpp */; };
 		C3F3FEBA161A528400795628 /* Data.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3F3FEB9161A528400795628 /* Data.1 */; };
 /* End PBXBuildFile section */
 
@@ -26,12 +25,21 @@
 
 /* Begin PBXFileReference section */
 		C3F3FEB3161A528400795628 /* Data */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Data; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3F3FEB7161A528400795628 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C3F3FEB9161A528400795628 /* Data.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Data.1; sourceTree = "<group>"; };
+		C3F3FEC2161A52BE00795628 /* DataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataClass.h; sourceTree = "<group>"; };
+		C3F3FEC3161A52BE00795628 /* DataClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataClass.cpp; sourceTree = "<group>"; };
+		C3F3FED5161AD1AF00795628 /* libDataLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDataLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C3F3FEB0161A528400795628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F3FED2161AD1AF00795628 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F3FEB3161A528400795628 /* Data */,
+				C3F3FED5161AD1AF00795628 /* libDataLib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,13 +69,24 @@
 		C3F3FEB6161A528400795628 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C3F3FEB7161A528400795628 /* main.cpp */,
+				C3F3FEC2161A52BE00795628 /* DataClass.h */,
+				C3F3FEC3161A52BE00795628 /* DataClass.cpp */,
 				C3F3FEB9161A528400795628 /* Data.1 */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C3F3FED3161AD1AF00795628 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		C3F3FEB2161A528400795628 /* Data */ = {
@@ -85,6 +105,23 @@
 			productName = Data;
 			productReference = C3F3FEB3161A528400795628 /* Data */;
 			productType = "com.apple.product-type.tool";
+		};
+		C3F3FED4161AD1AF00795628 /* DataLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3F3FED8161AD1AF00795628 /* Build configuration list for PBXNativeTarget "DataLib" */;
+			buildPhases = (
+				C3F3FED1161AD1AF00795628 /* Sources */,
+				C3F3FED2161AD1AF00795628 /* Frameworks */,
+				C3F3FED3161AD1AF00795628 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataLib;
+			productName = DataLib;
+			productReference = C3F3FED5161AD1AF00795628 /* libDataLib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,6 +145,7 @@
 			projectRoot = "";
 			targets = (
 				C3F3FEB2161A528400795628 /* Data */,
+				C3F3FED4161AD1AF00795628 /* DataLib */,
 			);
 		};
 /* End PBXProject section */
@@ -117,7 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3F3FEB8161A528400795628 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F3FED1161AD1AF00795628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +233,22 @@
 			};
 			name = Release;
 		};
+		C3F3FED6161AD1AF00795628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C3F3FED7161AD1AF00795628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -206,6 +266,15 @@
 			buildConfigurations = (
 				C3F3FEBE161A528400795628 /* Debug */,
 				C3F3FEBF161A528400795628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3F3FED8161AD1AF00795628 /* Build configuration list for PBXNativeTarget "DataLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F3FED6161AD1AF00795628 /* Debug */,
+				C3F3FED7161AD1AF00795628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
