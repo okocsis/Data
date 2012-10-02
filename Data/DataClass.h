@@ -4,6 +4,7 @@
 #include <iostream>
 
 using namespace std;
+
 template <typename DataTemplate>
 class DataClass
 {
@@ -22,9 +23,8 @@ public:
     
     Node* head;
     
-    virtual DinamicStack() : head(NULL)
-    {}
-    virtual ~DinamicStack();
+    DataClass();
+    virtual ~DataClass();
     
     virtual bool isEmpty();
     virtual void print(string &outDataTemplate);

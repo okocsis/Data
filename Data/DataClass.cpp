@@ -4,11 +4,9 @@
 #include "DataClass.h"
 using namespace std;
     
-    DinamicStack::DinamicStack()
-    {
-        head = NULL;
-    }
-    DinamicStack::~DinamicStack()
+    DataClass::DataClass() : head(NULL){}
+
+    DataClass::~DataClass()
     {
         while(head!=0)
         {
@@ -17,11 +15,11 @@ using namespace std;
             delete n;
         }
     }
-    bool DinamicStack::isEmpty()
+    bool DataClass::isEmpty()
     {
         return !(bool)head;
     }
-    void DinamicStack::print(string &outDataTemplate)
+    void DataClass::print(string &outDataTemplate)
     {
         //                Node* tempPtr;
         //                tempPtr = this->head;
@@ -33,7 +31,7 @@ using namespace std;
         //                    tempPtr = tempPtr->prevNode;
         //                }
     }
-    DataTemplate DinamicStack::top()
+    DataTemplate DataClass::top()
     {
         if (!isEmpty())
         {
@@ -45,7 +43,7 @@ using namespace std;
         }
         return 0;
     }
-    DataTemplate DinamicStack::pop()
+    DataTemplate DataClass::pop()
     {
         if (isEmpty()) {
             throw (string)"nemjo";
@@ -57,7 +55,7 @@ using namespace std;
         
         return tempData;
     }
-    void DinamicStack::push(DataTemplate value)
+    void DataClass::push(DataTemplate value)
     {
         Node* tempNode = new Node;
         tempNode->data = value;
