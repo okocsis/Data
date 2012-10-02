@@ -26,11 +26,24 @@ public:
     {}
     virtual ~DinamicStack();
     
-    bool isEmpty();
-    void print(string &outDataTemplate);
-    DataTemplate top();
-    DataTemplate pop();
-    void push(DataTemplate value);
+    virtual bool isEmpty();
+    virtual void print(string &outDataTemplate);
+    virtual DataTemplate top();
+    virtual DataTemplate pop();
+    virtual void push(DataTemplate value);
+    
+    
+    
+    virtual void PrintOut();
+    virtual DataTemplate GetValue();
+    virtual void StepNext();
+    virtual void RemoveAct();
+    
+    virtual void InsertLast();
+    virtual void InsertAfter();
+    virtual void RemoveFirst();
+    virtual void RemoveLast();
+    
 
     
 };
