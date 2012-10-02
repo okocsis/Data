@@ -4,39 +4,37 @@
 #include <iostream>
 
 using namespace std;
-
-
-
-
-
-class Node
+template <typename DataTemplate>
+class DataClass
 {
 public:
-    string data;
-    Node* prev;
+    class Node {
+    public:
+        DataTemplate data;
+        Node* prevNode;
+        Node() :  prevNode(NULL)
+        {
+        }
+        Node(Node* inNode,DataTemplate inData) : data(inData), prevNode(inNode)
+        {
+        }
+    };
     
-    Node();
-    Node(string inVal);
-};
-
-
-
-// lol
-
-
-class DynamicStack
-{
     Node* head;
     
-public:
-    DynamicStack();
-    void print();
+    virtual DinamicStack() : head(NULL)
+    {}
+    virtual ~DinamicStack();
+    
     bool isEmpty();
-    string top();
-    string pop();
-    void push(string inVal);
+    void print(string &outDataTemplate);
+    DataTemplate top();
+    DataTemplate pop();
+    void push(DataTemplate value);
 
-
+    
 };
+
+
 
 #endif
