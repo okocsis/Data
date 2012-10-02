@@ -20,9 +20,10 @@ public:
         {
         }
     };
-    
     Node* head;
-    
+    DataClass();
+    virtual ~DataClass();
+protected:
     virtual bool isEmpty();
     virtual void print(std::string &outDataTemplate);
     virtual DataTemplate top();
