@@ -96,6 +96,7 @@ using namespace std;
 
 int main()
 {
+
 //    typedef DataClass<int> List;
 //    try
 //    {
