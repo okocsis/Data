@@ -4,3 +4,7 @@
 *.xcscheme
 
 *.plist
+
+*.xcuserstate
+
+*.xcworkspacedata

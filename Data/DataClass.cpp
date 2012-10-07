@@ -96,86 +96,86 @@ using namespace std;
 
 int main()
 {
-    typedef DataClass<int> List;
-    try
-    {
-        List fibonacci;
-        cout << "--- Egy \"int\"-eket tartalmazo lista tesztelese ---\n";
-        cout << "Be: 0" << endl; fibonacci.InsertLast(0);
-        cout << "Be: 1" << endl; fibonacci.InsertLast(1);
-        cout << "Be: 1" << endl; fibonacci.InsertLast(1);
-        cout << "Be: 2" << endl; fibonacci.InsertLast(2);
-        cout << "Be: 3" << endl; fibonacci.InsertLast(3);
-        cout << "Be: 5" << endl; fibonacci.InsertLast(5);
-        cout << "Be: 8" << endl; fibonacci.InsertLast(8);
-        
-        cout << "\nA lista tartalma: " << endl;
-        fibonacci.PrintOut();
-        
-        cout << "\nKeszitsunk egy masolatot a listarol\n";
-        List<int> egeszek = fibonacci;
-        egeszek.PrintOut();
-        
-        cout << "\nAz aktualis elem ilyenkor az utolsonak betett elem" << endl;
-        cout << "Act: " << egeszek.GetValue() << endl;
-        
-        cout << "\nAllitsuk az aktualis elemet az elso elemre" << endl;
-        egeszek.ToFirst();
-        cout << "Act: " << egeszek.GetValue() << endl;
-        
-        cout << "\nLepjunk harmat elore (Harom StepNext utan): " << endl;
-        egeszek.StepNext();
-        egeszek.StepNext();
-        egeszek.StepNext();
-        cout << "Act: " << egeszek.GetValue() << endl;;
-        
-        cout << "\nAz aktualis elem torlesre kerul" << endl;
-        egeszek.RemoveAct();
-        cout << "Egyreszt eltunt a szam a listabol: " << endl;
-        egeszek.PrintOut();
-        cout << "Masreszt az aktualis elem a torolt utani lett: " << endl;
-        cout << "Act: " << egeszek.GetValue();
-        
-        
-        cout << "\n\nIrassuk ki ujra a ket listat:" << endl;
-        egeszek.PrintOut();
-        fibonacci.PrintOut();
-        cout << "\nA ket lista kulonbozo, hisz a masolat fuggetlen az eredetitol" << endl;
-        
-        List<string> stringek;
-        cout << "\n\n\n--- Egy \"string\"-eket tartalmazo lista tesztelese ---\n";
-        cout << "Be: Januar" << endl; stringek.InsertFirst("Januar");
-        cout << "Be: Februar" << endl; stringek.InsertFirst("Februar");
-        cout << "Be: Kazuar" << endl; stringek.InsertFirst("Kazuar");
-        cout << "Be: Jaguar" << endl; stringek.InsertFirst("Jaguar");
-        
-        cout << "\nA lista tartalma ekkor: " << endl;
-        stringek.PrintOut();
-        
-        cout << "\nAz aktualis elem ilyenkor az elso elem" << endl;
-        cout << "Act: " << stringek.GetValue() << endl;
-        
-        cout << "\nEgy StepNext utan: " << endl;
-        stringek.StepNext();
-        cout << "Act: " << stringek.GetValue() << endl;;
-        
-        cout << "\nHa torlom az aktualis elemet" << endl;
-        stringek.RemoveAct();
-        cout << "Egyreszt eltunik a szoveg a listabol: " << endl;
-        stringek.PrintOut();
-        cout << "Masreszt az aktualis elem a torolt utani elem lesz: " << endl;
-        cout << "Act: " << stringek.GetValue();
-        
-    }
-    catch(UnderFlowException& e)
-    {
-        cout << "\n***HIBA tortent!*** " << e.what() << endl;
-    }
-    catch(ActNullException& e)
-    {
-        cout << "\n***HIBA tortent!*** " << e.what() << endl;
-    }
-    
-    //Az udvarias program elkˆszˆn
-    cout << "\n\nA program befejezte a futtasat, viszontlatasra!" <<endl;
+//    typedef DataClass<int> List;
+//    try
+//    {
+//        List fibonacci;
+//        cout << "--- Egy \"int\"-eket tartalmazo lista tesztelese ---\n";
+//        cout << "Be: 0" << endl; fibonacci.InsertLast(0);
+//        cout << "Be: 1" << endl; fibonacci.InsertLast(1);
+//        cout << "Be: 1" << endl; fibonacci.InsertLast(1);
+//        cout << "Be: 2" << endl; fibonacci.InsertLast(2);
+//        cout << "Be: 3" << endl; fibonacci.InsertLast(3);
+//        cout << "Be: 5" << endl; fibonacci.InsertLast(5);
+//        cout << "Be: 8" << endl; fibonacci.InsertLast(8);
+//
+//        cout << "\nA lista tartalma: " << endl;
+//        fibonacci.PrintOut();
+//
+//        cout << "\nKeszitsunk egy masolatot a listarol\n";
+//        List<int> egeszek = fibonacci;
+//        egeszek.PrintOut();
+//
+//        cout << "\nAz aktualis elem ilyenkor az utolsonak betett elem" << endl;
+//        cout << "Act: " << egeszek.GetValue() << endl;
+//
+//        cout << "\nAllitsuk az aktualis elemet az elso elemre" << endl;
+//        egeszek.ToFirst();
+//        cout << "Act: " << egeszek.GetValue() << endl;
+//
+//        cout << "\nLepjunk harmat elore (Harom StepNext utan): " << endl;
+//        egeszek.StepNext();
+//        egeszek.StepNext();
+//        egeszek.StepNext();
+//        cout << "Act: " << egeszek.GetValue() << endl;;
+//
+//        cout << "\nAz aktualis elem torlesre kerul" << endl;
+//        egeszek.RemoveAct();
+//        cout << "Egyreszt eltunt a szam a listabol: " << endl;
+//        egeszek.PrintOut();
+//        cout << "Masreszt az aktualis elem a torolt utani lett: " << endl;
+//        cout << "Act: " << egeszek.GetValue();
+//
+//
+//        cout << "\n\nIrassuk ki ujra a ket listat:" << endl;
+//        egeszek.PrintOut();
+//        fibonacci.PrintOut();
+//        cout << "\nA ket lista kulonbozo, hisz a masolat fuggetlen az eredetitol" << endl;
+//
+//        List<string> stringek;
+//        cout << "\n\n\n--- Egy \"string\"-eket tartalmazo lista tesztelese ---\n";
+//        cout << "Be: Januar" << endl; stringek.InsertFirst("Januar");
+//        cout << "Be: Februar" << endl; stringek.InsertFirst("Februar");
+//        cout << "Be: Kazuar" << endl; stringek.InsertFirst("Kazuar");
+//        cout << "Be: Jaguar" << endl; stringek.InsertFirst("Jaguar");
+//
+//        cout << "\nA lista tartalma ekkor: " << endl;
+//        stringek.PrintOut();
+//
+//        cout << "\nAz aktualis elem ilyenkor az elso elem" << endl;
+//        cout << "Act: " << stringek.GetValue() << endl;
+//
+//        cout << "\nEgy StepNext utan: " << endl;
+//        stringek.StepNext();
+//        cout << "Act: " << stringek.GetValue() << endl;;
+//
+//        cout << "\nHa torlom az aktualis elemet" << endl;
+//        stringek.RemoveAct();
+//        cout << "Egyreszt eltunik a szoveg a listabol: " << endl;
+//        stringek.PrintOut();
+//        cout << "Masreszt az aktualis elem a torolt utani elem lesz: " << endl;
+//        cout << "Act: " << stringek.GetValue();
+//
+//    }
+//    catch(UnderFlowException& e)
+//    {
+//        cout << "\n***HIBA tortent!*** " << e.what() << endl;
+//    }
+//    catch(ActNullException& e)
+//    {
+//        cout << "\n***HIBA tortent!*** " << e.what() << endl;
+//    }
+//
+//    //Az udvarias program elkˆszˆn
+//    cout << "\n\nA program befejezte a futtasat, viszontlatasra!" <<endl;
 }
